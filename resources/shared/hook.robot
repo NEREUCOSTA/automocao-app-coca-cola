@@ -4,12 +4,12 @@ Resource  ${EXECDIR}/resources/main.robot
 
 *** Keywords ***
 ### SESSION CONFIGS ###
- Start the session
+Start the session
     Open Application  http://localhost:4723/wd/hub
         ...  platformName=android
         ...  deviceName=emulator-5554
         ...  appPackage=com.solarbr.sfa
-        ...  appActivity=com.solarbr.sfa.crc64520a23919bafff94.MainActivity
+        ...  appActivity=crc64520a23919bafff94.SplashActivity 
         ...  automationName=Uiautomator2
 
 Close the Session
