@@ -7,15 +7,17 @@ Resource  ${EXECDIR}/resources/main.robot
 &{home_permissions}
 ...  btn_permissionsok=//android.widget.Button[@resource-id="android:id/button2"][@text="OK"]
 ...  btn_allpermissions=//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_foreground_only_button"]
-...  btn_allow=//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+...  btn_allow=//android.widget.Button[@text="ALLOW"]
 
 *** Keywords ***
 
 concede permissão
   clico no botão "OK" na mensagem de permissão
-  clico em "While using the app"
-  Sleep    2
-  clico em "While using the app"
+  # clico em "While using the app"
+  # Sleep    2
+  # clico em "While using the app"
+  clico em "Allow"
+  clico em "Allow"
   clico em "Allow"
 
 clico no botão "OK" na mensagem de permissão
