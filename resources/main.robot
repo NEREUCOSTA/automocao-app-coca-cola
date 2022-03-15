@@ -16,3 +16,4 @@ Resource  ${EXECDIR}/resources/data/credentials.robot
 Resource  ${EXECDIR}/resources/pages/controllers/login.robot
 Resource  ${EXECDIR}/resources/pages/controllers/home.robot
 Resource  ${EXECDIR}/resources/pages/controllers/home-permissions.robot
+Resource  ${EXECDIR}/resources/pages/controllers/vendedor.robot
