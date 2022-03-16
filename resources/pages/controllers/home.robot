@@ -5,8 +5,8 @@ Resource  ${EXECDIR}/resources/main.robot
 
 *** Variables ***
 &{home}
-...  btn_login=//android.widget.Button[@text="LOGIN"]
-...  btn_permissionsok=//android.widget.Button[@resource-id="android:id/button2"][@text="OK"]
+...  btn_login=//android.widget.TextView[@text="LOGIN"]
+...  btn_permissionsok=//android.widget.Button[@text="OK"]
 
 *** Keywords ***
 estou em home
