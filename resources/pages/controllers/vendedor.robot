@@ -16,6 +16,14 @@ Resource  ${EXECDIR}/resources/main.robot
 vejo a tela CONVIDADO
     Wait Until Element is Visible  ${vendedor.field_convidado}  30s
 
+estou na tela CONVIDADO
+    estou na tela login
+    clico no botao login
+    digito a matricula 
+    digito o password
+    clico no botão entrar
+    vejo a tela CONVIDADO 
+
 clico no botao carga completa
     Click Element  ${vendedor.field_carga_completa}
 

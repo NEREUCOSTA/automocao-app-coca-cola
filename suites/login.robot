@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation  Em suites é onde ficam os cenários de teste e este é apenas um exemplo.
 Resource  ${EXECDIR}/resources/main.robot
-#Test Setup     Start the session
-#Test Teardown  Close the Session
+Test Setup     Start the session
+Test Teardown  Close the Session
 
 
 *** Test Case ***
