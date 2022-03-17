@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation  Este é um documento modelo para uma controller organizada.
 Resource  ${EXECDIR}/resources/main.robot
+Library    AppiumLibrary
 
 *** Variables ***
 &{vendedor}
@@ -8,6 +9,8 @@ Resource  ${EXECDIR}/resources/main.robot
 ...  field_convidado=xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[2]
 ...  field_carga_completa=xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup
 ...  btn_sim=//android.widget.Button[@text="SIM"]
+...  msg_carga_sucesso=//android.widget.TextView[@text="CARGA REALIZADA COM SUCESSO"]
+...  btn_confirmacao=//android.widget.ImageView
 
 
 
@@ -21,10 +24,23 @@ estou na tela CONVIDADO
   digito a matricula
   digito o password
   clico no botão entrar
+  Sleep  7
   vejo a tela CONVIDADO
-
+  
 clico no botao carga completa
-  Click Element  ${vendedor.field_carga_completa}
+  Wait Until Element is Visible  ${vendedor.field_carga_completa}  
+  Click Element                  ${vendedor.field_carga_completa}
 
 clico no botao sim
-  Click Element  ${vendedor.field}
+  Wait Until Element is Visible  ${vendedor.btn_sim} 
+  Click Element                  ${vendedor.btn_sim}
+
+vejo a mensagem carga realizado com sucesso
+  Wait Until Element is Visible  ${vendedor.msg_carga_sucesso}  120s
+  
+clico no botao de confirmação
+  Wait Until Element is Visible  ${vendedor.btn_confirmacao}
+  Click Element                  ${vendedor.btn_confirmacao}
+      
+
+

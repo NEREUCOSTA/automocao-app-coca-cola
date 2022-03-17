@@ -19,9 +19,21 @@ cenario 2: relizar acesso no app
     E clico no botão entrar
     Então vejo a tela CONVIDADO
 
-cenario 3: clicar no botao carga completa
+cenario 3: efetuar a carga completa
+    [Documentation]  teste de carga completa efetuada com sucesso
     [tags]  3  smoke
     Dado que estou na tela CONVIDADO
     Quando clico no botao carga completa
     E clico no botao sim
-    #Então vejo a tela iniciar a minha rotina
+    Então vejo a mensagem carga realizado com sucesso
+    E clico no botao de confirmação
+
+cenario 4: acesso a tela principal
+    [Documentation]  teste de carga completa efetuada com sucesso
+    [tags]  4  smoke
+    Dado que estou na tela CONVIDADO
+    Quando clico no botao carga completa
+    E clico no botao sim
+    E vejo a mensagem carga realizado com sucesso
+    E clico no botao de confirmação
+    Então vejo botão iniciar rotina    
