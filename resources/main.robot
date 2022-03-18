@@ -18,3 +18,5 @@ Resource  ${EXECDIR}/resources/pages/controllers/home.robot
 Resource  ${EXECDIR}/resources/pages/controllers/home-permissions.robot
 Resource  ${EXECDIR}/resources/pages/controllers/vendedor.robot
 Resource  ${EXECDIR}/resources/pages/controllers/tela-principal.robot
+Resource  ${EXECDIR}/resources/pages/controllers/busca_cliente.robot
+Resource  ${EXECDIR}/resources/pages/controllers/cliente.robot
