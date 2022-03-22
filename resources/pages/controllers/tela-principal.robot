@@ -12,7 +12,7 @@ Library    AppiumLibrary
 
 *** Keywords ***
 vejo botão iniciar rotina
-    Wait Until Element is Visible  ${principal.btn_iniciar_rotina}  20s
+    Wait Until Element is Visible  ${principal.btn_iniciar_rotina}  50s
     
 clico no botao iniciar rotina
     Wait Until Element is Visible  ${principal.btn_iniciar_rotina}
@@ -24,5 +24,5 @@ estou na tela principal do vendedor
    clico no botao sim
    vejo a mensagem carga realizado com sucesso
    clico no botao de confirmação
-   vejo a botao iniciar rotina
+   vejo botão iniciar rotina
 

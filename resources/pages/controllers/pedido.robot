@@ -4,7 +4,7 @@ Resource  ${EXECDIR}/resources/main.robot
 Library    AppiumLibrary
 
 
+
 *** Keywords ***
-clico no cliente ${nome_cliente}
-    Wait Until Page Contains  ${nome_cliente}    
-    Click Text    ${nome_cliente}
+vejo a tela de pedidos
+    Wait Until Page Contains    PESQUISA CÓDIGO DE BARRAS / QR CODE

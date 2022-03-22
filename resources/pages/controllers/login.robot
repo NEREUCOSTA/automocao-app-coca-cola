@@ -22,7 +22,7 @@ estou na tela login
     vejo a tela de login   
 
 digito a matricula
-    Wait Until Element is Visible  ${login.field_matricula}
+    Wait Until Element is Visible  ${login.field_matricula}  10s
     input text                     ${login.field_matricula}  ${credentials.user_01}  
 
 digito o password
