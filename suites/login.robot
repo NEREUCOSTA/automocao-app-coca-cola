@@ -26,7 +26,7 @@ cenario 3: efetuar a carga completa
     [tags]  3  smoke
     Dado que estou na tela CONVIDADO
     Quando clico no botao carga completa
-    E clico no botao sim
+    E clico no botao sim para iniciar carga
     Então vejo a mensagem carga realizado com sucesso
     E clico no botao de confirmação
 
@@ -35,7 +35,7 @@ cenario 4: acesso a tela principal
     [tags]  4  smoke
     Dado que estou na tela CONVIDADO
     Quando clico no botao carga completa
-    E clico no botao sim
+    E clico no botao sim para iniciar carga
     E vejo a mensagem carga realizado com sucesso
     E clico no botao de confirmação
     Então vejo botão iniciar rotina    

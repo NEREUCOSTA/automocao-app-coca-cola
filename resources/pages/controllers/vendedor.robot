@@ -31,7 +31,7 @@ clico no botao carga completa
   Wait Until Element is Visible  ${vendedor.field_carga_completa}  
   Click Element                  ${vendedor.field_carga_completa}
 
-clico no botao sim
+clico no botao sim para iniciar carga
   Wait Until Element is Visible  ${vendedor.btn_sim} 
   Click Element                  ${vendedor.btn_sim}
 

@@ -13,9 +13,9 @@ Library    AppiumLibrary
 vejo a tela de pedidos
     Wait Until Page Contains    PESQUISA CÓDIGO DE BARRAS / QR CODE
 
-clico no botao avançar
+clico no botao avancar
     Wait Until Element Is Visible    ${pedido.btn_avancar}
-    Click Element  ${pedido.btn_avancar}
+    Click Element                    ${pedido.btn_avancar}
 
 estou na tela de pedidos
   estou na tela do cliente ${costumer.name_client}

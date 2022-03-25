@@ -20,14 +20,18 @@ cenario 2: acessar criacao de pedidos
     Então vejo a tela de pedidos
 
 cenario 3 : efetuar pedido
+    [Documentation]  acesso a tela principal
+    [tags]  3  smoke
     Dado que estou na tela de pedidos
-    Quando clico no botao continuar
-    E Clico no botao btn_avancar
-    E vejo a lista de produtos
+    Quando clico no botao avancar
+    E clico no botao continuar
+    E clico no botao avancar pedido 
+    E clico no botao sim inventario
     E clico no botao adicionar
     E clico no botao carrinho
     E clico no botao concluir pedido
     E vejo a tela finalizar pedido
-    E clico no botao sim
+    E clico no botao sim para finalizar pedido
+    E clico no botao concluir pedido final
     Entao vejo mensagem pedido criado
     E clico no botao ok

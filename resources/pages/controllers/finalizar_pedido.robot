@@ -5,23 +5,42 @@ Library    AppiumLibrary
 
 *** Variables ***
 &{finaliza_pedido}
-...  btn_finalizar_pedido=//android.widget.TextView[@text="FINALIZAR PEDIDO"]
+...  btn_concluir_pedido_final=//android.widget.TextView[@text="CONCLUIR"]
 ...  btn_sim=//android.widget.Button[@text="sim"]
-...  btn_ok==//android.widget.Button[@text="OK"]
+...  btn_ok=//android.widget.Button[@text="OK"]
+...  btn_finalizar_pedido=//android.widget.TextViewTextView[@text="FINALIZAR PEDIDO"]
+...  btn_aviso_finalizar=//android.widget.Button[@text="OK"]
 
 
 *** Keywords ***
+
 
 clico no botao finalizar pedido
     Wait Until Element Is Visible    ${finaliza_pedido.btn_finalizar_pedido}
     Click Element                    ${finaliza_pedido.btn_finalizar_pedido}
 
-clico no botao sim
+clico no botao sim para finalizar pedido
     Wait Until Element Is Visible    ${finaliza_pedido.btn_sim}
     Click Element                    ${finaliza_pedido.btn_sim}
 
+clico no botao concluir pedido final
+    Wait Until Element Is Visible    ${finaliza_pedido.btn_concluir_pedido_final}
+    Click Element                    ${finaliza_pedido.btn_concluir_pedido_final}
+
+
 vejo mensagem pedido criado
     Wait Until Page Contains    Pedido criado!
+
+vejo a tela finalizar pedido
+    Wait Until Page Contains    FINALIZAR PEDIDO  
+
+vejo a mensagem inventario criado
+    Wait Until Page Contains  Inventário do cliente realizado!   
+
+clico no botao aviso finalizar inventario
+     Wait Until Element Is Visible    ${finaliza_pedido.btn_aviso_finalizar}
+    Click Element                     ${finaliza_pedido.btn_aviso_finalizar}
+        
 
 clico no botao ok  
     Wait Until Element Is Visible    ${finaliza_pedido.btn_ok}
