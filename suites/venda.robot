@@ -35,3 +35,33 @@ cenario 3 : efetuar pedido
     E clico no botao concluir pedido final
     Entao vejo mensagem pedido criado
     E clico no botao ok
+
+
+cenario 4 : efetuar outros pedidos
+    [Documentation]  acesso a tela principal
+    [tags]  4  smoke
+    Dado que estou na tela de pedidos
+    E clico no botao avancar
+    E clico no botao continuar
+    E clico no botao avancar pedido
+    E clico no botao sim inventario
+    E clico no botao adicionar
+    E clico no botao carrinho
+    clico no botao concluir pedido
+    E clico no botao ok
+    Quando clico no botao agua do menu superior
+    E clico no botao adicionar
+    E clico no botao aperitivo do menu superior
+    E clico no botao adicionar
+    E clico no botao carrinho
+    E clico no botao remover item
+    E clico no botao concluir pedido
+    E vejo a tela finalizar pedido
+    E clico no botao sim para finalizar pedido
+    E clico no botao concluir pedido final
+    Entao vejo mensagem pedido criado
+    E clico no botao ok
+
+
+    
+
