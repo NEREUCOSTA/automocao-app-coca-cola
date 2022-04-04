@@ -5,7 +5,7 @@ Library    AppiumLibrary
 
 *** Variables ***
 &{resumo_pedido}
-...  btn_concluir_pedido=//android.widget.TextView[@text="CONCLUIR"]
+...  btn_concluir_pedido=//android.widget.TextView[@text="CONCLUIR PEDIDO"]
 
 
 *** Keywords ***

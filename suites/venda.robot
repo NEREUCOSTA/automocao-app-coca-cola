@@ -27,7 +27,7 @@ cenario 3 : efetuar pedido
     E clico no botao continuar
     E clico no botao avancar pedido 
     E clico no botao sim inventario
-    E clico no botao adicionar
+    E clico no botao adicionar 1
     E clico no botao carrinho
     E clico no botao concluir pedido
     E vejo a tela finalizar pedido
@@ -45,18 +45,19 @@ cenario 4 : efetuar outros pedidos
     E clico no botao continuar
     E clico no botao avancar pedido
     E clico no botao sim inventario
-    E clico no botao adicionar
-    E clico no botao carrinho
-    clico no botao concluir pedido
-    E clico no botao ok
+    # E clico no botao adicionar
+    # E clico no botao carrinho
+    # clico no botao concluir pedido
+    # E clico no botao ok
     Quando clico no botao agua do menu superior
-    E clico no botao adicionar
+    E clico no botao adicionar 2
     E clico no botao aperitivo do menu superior
-    E clico no botao adicionar
+    E clico no botao adicionar 3
     E clico no botao carrinho
     E clico no botao remover item
     E clico no botao concluir pedido
     E vejo a tela finalizar pedido
+    E clico no botao finalizar pedido
     E clico no botao sim para finalizar pedido
     E clico no botao concluir pedido final
     Entao vejo mensagem pedido criado

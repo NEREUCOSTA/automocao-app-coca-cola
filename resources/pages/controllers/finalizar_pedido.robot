@@ -6,9 +6,9 @@ Library    AppiumLibrary
 *** Variables ***
 &{finaliza_pedido}
 ...  btn_concluir_pedido_final=//android.widget.TextView[@text="CONCLUIR"]
-...  btn_sim=//android.widget.Button[@text="sim"]
+...  btn_sim=//android.widget.Button[@text="Sim"]
 ...  btn_ok=//android.widget.Button[@text="OK"]
-...  btn_finalizar_pedido=//android.widget.TextViewTextView[@text="FINALIZAR PEDIDO"]
+...  btn_finalizar_pedido=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView
 ...  btn_aviso_finalizar=//android.widget.Button[@text="OK"]
 
 
