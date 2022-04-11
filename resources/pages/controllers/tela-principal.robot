@@ -18,7 +18,7 @@ vejo botão iniciar rotina
 clico no botao iniciar rotina
     Wait Until Element is Visible  ${principal.btn_iniciar_rotina}
     Click Element                  ${principal.btn_iniciar_rotina}
-        
+       
 estou na tela principal do vendedor
    estou na tela CONVIDADO
    clico no botao carga completa

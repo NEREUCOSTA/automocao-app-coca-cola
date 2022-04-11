@@ -13,11 +13,11 @@ Library    AppiumLibrary
 
 
 clico no botao continuar
-    Sleep  5s
+    
     Wait Until Element Is Visible    ${relatorio_personalizado.btn_continuar}
     Click Element                    ${relatorio_personalizado.btn_continuar}
 
 clico no botao registrar nao pesquisa
-    Sleep  5s
+    
     Wait Until Element Is Visible    ${relatorio_personalizado.btn_registrar_nao_pesquisa}
     Click Element                    ${relatorio_personalizado.btn_registrar_nao_pesquisa}   

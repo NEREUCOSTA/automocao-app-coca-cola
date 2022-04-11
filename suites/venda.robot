@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  Em suites é onde ficam os cenários de teste e este é apenas um exemplo.
+Documentation  Em suites é onde ficam os cenários de teste.
 Resource  ${EXECDIR}/resources/main.robot
 Test Setup     Start the session
 Test Teardown  Close the Session
@@ -42,9 +42,10 @@ cenario 4 : efetuar outros pedidos
     [tags]  4  smoke
     Dado que estou na tela de pedidos
     E clico no botao avancar
+    clico no botao ok1
     E clico no botao continuar
     E clico no botao avancar pedido
-    E clico no botao sim inventario
+    #E clico no botao sim inventario
     Quando clico no botao agua do menu superior
     E clico no botao adicionar 2
     E clico no botao aperitivo do menu superior
@@ -55,10 +56,10 @@ cenario 4 : efetuar outros pedidos
     E vejo a tela finalizar pedido
     E clico no botao finalizar pedido
     E clico no botao sim para finalizar pedido
-    E clico no botao concluir pedido final
-    Entao vejo mensagem pedido criado
+    #E clico no botao concluir pedido final
+    Então vejo mensagem pedido criado
     E clico no botao ok
-
+    
 
     
 
