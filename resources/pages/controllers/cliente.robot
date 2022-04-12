@@ -15,8 +15,10 @@ vejo a tela do cliente ${nome_cliente}
 estou na tela do cliente ${nome_cliente}
     estou na tela principal do vendedor
     clico no botao iniciar rotina
-    clico no combo dia da semana
-    clico na lista de dia da semana
+    # clico no combo dia da semana
+    # clico na lista de dia da semana
+    digito nome do cliente "${nome_cliente}" na busca
+    # clico na lupa para buscar o cliente
     clico no cliente ${nome_cliente}
     vejo a tela do cliente ${nome_cliente}
 
