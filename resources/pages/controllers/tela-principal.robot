@@ -8,6 +8,7 @@ Library    AppiumLibrary
 &{principal}
 ...  btn_iniciar_rotina=//android.widget.TextView[@text="INICIAR MINHA ROTINA"]
 ...  field_name=//android.widget.TextView[@text="RAIANNY KEROLLENY GUILHERME"]
+...  btn_novo_cliente=//android.widget.TextView[@text="NOVO CLIENTE"]
 
 
 
@@ -26,4 +27,8 @@ estou na tela principal do vendedor
    vejo a mensagem carga realizado com sucesso
    clico no botao de confirmação
    vejo botão iniciar rotina
+
+clico no botão "Novo Cliente"
+    Wait Until Element Is Visible   ${principal.btn_novo_cliente}    
+    Click Element                   ${principal.btn_novo_cliente}   
 

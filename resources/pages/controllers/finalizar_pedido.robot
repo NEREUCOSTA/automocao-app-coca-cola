@@ -42,7 +42,7 @@ clico no botao aviso finalizar inventario
     Click Element                     ${finaliza_pedido.btn_aviso_finalizar}
         
 
-clico no botao ok  
+clico no botao ok inventario 
     Wait Until Element Is Visible    ${finaliza_pedido.btn_ok}
     Click Element                    ${finaliza_pedido.btn_ok}
        

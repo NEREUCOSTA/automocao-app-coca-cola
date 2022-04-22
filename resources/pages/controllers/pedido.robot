@@ -15,9 +15,10 @@ vejo a tela de pedidos
     Wait Until Element Is Visible    ${pedido.label_pedidos}
 
 clico no botao avancar
-    clico no botao confirmar alerta
-    Wait Until Element Is Visible    ${pedido.btn_avancar}
-    Click Element                    ${pedido.btn_avancar}
+    Wait Until Page Contains  AVANÇAR
+    Click Text  AVANÇAR
+    #Wait Until Element Is Visible    ${pedido.btn_avancar}
+    #Click Element                    ${pedido.btn_avancar}
 
 clico no botao confirmar alerta
     ${status}  Run Keyword And Return Status    Wait Until Element Is visible  ${pedido.btn_confirmar_alerta}
@@ -29,7 +30,9 @@ estou na tela de pedidos
   estou na tela do cliente ${costumer.name_client}
   clico no botao checkin
   clico no botao criar pedido
-  vejo a tela de pedidos
+  clico no botao avancar
+  clico no botao continuar
+  #vejo a tela de pedidos
 
 clico no botão para abrir a lista de tipo de pedido
     # TO DO Wait...

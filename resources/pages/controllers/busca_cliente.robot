@@ -9,6 +9,7 @@ Library    AppiumLibrary
 ...  dia_todos=//android.widget.TextView[@text="Todos"]
 ...  field_busca_cliente=//android.widget.EditText[@text="Pesquisar cliente"]
 ...  btn_buscar_cliente=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]
+
 *** Keywords ***
 clico no cliente ${nome_cliente}
     Wait Until Element Is Visible    //android.widget.TextView[@text="${nome_cliente}"]
