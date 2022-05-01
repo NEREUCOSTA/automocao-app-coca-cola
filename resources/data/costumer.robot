@@ -1,6 +1,6 @@
 # AQUI É ONDE VOC~E DECLARA DENTRO DE DICIONARIOS TODAS AS MASSAS QUE VOC~E VAI UTILIZAR #
 *** Variables ***
 &{costumer}
-...  name_client=VALTER PEREIRA CAMPOS
+...  name_client=JOSEFA VITAL DOS SANTOS
 &{costumer2}
 ...  name_client=BLANDINA MOREIRA DE SOUZA

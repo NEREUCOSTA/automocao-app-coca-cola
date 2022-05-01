@@ -11,7 +11,7 @@ Library    AppiumLibrary
 ...  field_canal=//android.widget.Button[@text="Canal"]
 ...  canal_frio=//android.widget.TextView[@text="FRIO"]
 ...  field_sub_canal=//android.widget.Button[@text="Sub-Canal"]
-...  sub_canal_Self_Service=//android.widget.TextView[@text="QUARTEL"]
+...  sub_canal_Self_Service=//android.widget.TextView[@text="JOGO"]
 ...  sub_menu_geral=//android.widget.TextView[@text="Geral"]
 ...  field_razao_social=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.EditText
 ...  field_nome_fantasia=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.EditText
@@ -27,6 +27,7 @@ Library    AppiumLibrary
 ...  field_cep=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.EditText
 ...  field_bairro=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[5]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.EditText
 ...  field_cidade=//android.widget.Button[@text="Escolha sua cidade"]
+...  field_definir_cidade=//android.widget.TextView[@text="ITAITINGA"]
 ...  field_latitude=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[8]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.EditText
 ...  field_longitude=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[9]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.EditText
 ...  sub_financeiro=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView
@@ -42,7 +43,7 @@ Library    AppiumLibrary
 *** Keywords ***
 
 vejo a tela novo cliente
-    Sleep    5s
+    Sleep    10s
     Wait Until Page Contains    NOVO CLIENTE - Atividade
 
 clico em grupo atividade
@@ -65,7 +66,7 @@ seleciono o canal "frio"
     Wait Until Element Is Visible    ${cadastro_cliente.field_sub_canal}
     Click Element                    ${cadastro_cliente.field_sub_canal}
 
-seleciono o sub-canal "QUARTEL"
+seleciono o sub-canal "JOGO"
     Wait Until Element Is Visible    ${cadastro_cliente.sub_canal_Self_Service}
     Click Element                    ${cadastro_cliente.sub_canal_Self_Service}
 
@@ -125,10 +126,13 @@ seleciono o "bairro"
     Wait Until Element Is Visible    ${cadastro_cliente.field_bairro}
     Input Text                       ${cadastro_cliente.field_bairro}  Taguatinga
 
-seleciono a "cidade"
+seleciono o campo "cidade" 
     Wait Until Element Is Visible    ${cadastro_cliente.field_cidade}
-    Input Text                       ${cadastro_cliente.field_cidade}  IRACEMA
+    Click Element                    ${cadastro_cliente.field_cidade} 
 
+seleciono a cidade "ITAITINGA"
+    Wait Until Element Is Visible    ${cadastro_cliente.field_definir_cidade}
+    Click Element                    ${cadastro_cliente.field_definir_cidade}
  seleciono a "Latitude"
     Wait Until Element Is Visible    ${cadastro_cliente.field_latitude}
     Input Text                       ${cadastro_cliente.field_latitude}  43
@@ -167,14 +171,14 @@ clico em grupo Outros
 
 seleciono o campo "Desc Info"    
     Wait Until Element Is Visible    ${cadastro_cliente.field_desc_info}
-    Input Text                       ${cadastro_cliente.field_desc_info}  3   
+    Input Text                       ${cadastro_cliente.field_desc_info}  35   
 
 clico no botão salvar
     Wait Until Element Is Visible    ${cadastro_cliente.btn_salvar}
     Click Element                    ${cadastro_cliente.btn_salvar}
 
 
-           
+    
     
 estou na tela novo cliente
     estou na tela principal do vendedor
@@ -188,7 +192,7 @@ preencho os campos obrigatório
     clico em canal
     seleciono o canal "frio"
     clico em sub-canal
-    seleciono o sub-canal "QUARTEL"
+    seleciono o sub-canal "JOGO"
     clico no grupo Geral
     Seleciono o campo "Razão Social"
     Seleciono o campo "Nome Fantasia"
@@ -203,7 +207,8 @@ preencho os campos obrigatório
     seleciono o "numero"
     seleciono o "cep"
     seleciono o "bairro"
-    seleciono a "cidade"
+    seleciono o campo "cidade"
+    seleciono a cidade "ITAITINGA"
     seleciono a "Latitude"
     seleciono a "Longitude"
     clico no grupo financeiro
@@ -211,7 +216,9 @@ preencho os campos obrigatório
     seleciono o metodo "A VISTA / DINHEIRO"
     seleciono a "tabela de preço"
     seleciono o campo "001 - FUNCIONARIOS"
-    seleciono o campo "Dias de Prazo" 
+    seleciono o campo "Dias de Prazo"
+    clico em grupo Outros
+    seleciono o campo "Desc Info"
     clico no botão salvar 
 
     
