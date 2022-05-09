@@ -28,6 +28,7 @@ Resource  ${EXECDIR}/resources/pages/controllers/resumo_pedido.robot
 Resource  ${EXECDIR}/resources/pages/controllers/carrinho.robot
 Resource  ${EXECDIR}/resources/pages/controllers/cadastro_cliente.robot
 Resource  ${EXECDIR}/resources/pages/controllers/equipamentos.robot
+Resource  ${EXECDIR}/resources/pages/controllers/lembrete.robot
 
 
 # resources/data
