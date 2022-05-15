@@ -19,7 +19,7 @@ Cenario 2 : cadastrar o lembretes
     [tags]  2  smoke
     Dado que estou na tela do cliente ${costumer.name_client}
     E clico no botao checkin
-    E acesso o cadastro de lembretes
-    Quando preencho o campo escrever lembrete
-    E clico no botão salvar
+    E acesso ao cadastro de lembretes
+    Quando preencho o campo escrever lembrete Coca Cola é isso ai
+    E clico no botão salvar lembrete
     Então vejo a mensagem sucesso   
