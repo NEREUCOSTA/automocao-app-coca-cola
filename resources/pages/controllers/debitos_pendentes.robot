@@ -20,6 +20,7 @@ clico no botão debitos pendentes
     Click Element                    ${cadastro_debitos_pendentes.grupo_debitos_pendentes}
 
 seleciono a botão ok
+    Sleep    5s
     Wait Until Element Is Visible    ${cadastro_debitos_pendentes.btn_ok_debitos}
     Click Element                    ${cadastro_debitos_pendentes.btn_ok_debitos}
 
